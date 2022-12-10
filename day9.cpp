@@ -49,9 +49,7 @@ int main()
         char dir;
         int x;
         cin >> dir >> x;
-        tails[0].first += d[dir].first, tails[0].second += d[dir].second;
-        for (int i=1;i<10;i++) if (!touch(i)) upd(i);
-        for (int j=0;j<x-1;j++) {
+        for (int j=0;j<x;j++) {
             tails[0].first += d[dir].first, tails[0].second += d[dir].second;
             for (int i=1;i<10;i++) if (!touch(i)) upd(i);
         }
